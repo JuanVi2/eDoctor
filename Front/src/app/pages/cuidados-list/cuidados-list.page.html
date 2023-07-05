@@ -1,0 +1,8 @@
+<app-base-layout [pageTitle]="'Mi plan de cuidados'">
+  <ion-list>
+    <ion-item *ngFor="let cuidado of cuidados" (click)="irPaginaCuidado(cuidado.id)">
+      <ion-label>{{cuidado.titulo}}</ion-label>
+      <ion-badge color="secondary">{{cuidado.fechaInicio}} - {{cuidado.fechaFin}}</ion-badge>
+    </ion-item>
+  </ion-list>
+</app-base-layout>

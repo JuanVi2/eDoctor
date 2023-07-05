@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "tipo": 0,
+    "persona": 1,
+    "asunto": "Hola Amigo!",
+    "remitente": "Miguel Angel Paz",
+    "texto": "Hola, Juan, al igual que tú tambien me han detectado la diabetes hace poco.",
+    "fecha": "06/06/2022"
+  },
+  {
+    "id": 2,
+    "tipo": 0,
+    "persona": 0,
+    "asunto": "Recodatoria de cita",
+    "remitente": "William",
+    "texto": "Hola Juan! Queria recordarte que mañana tenemos revisión por lo que no te olvides de traer todo.",
+    "fecha": "08/06/2022"
+  },
+  {
+    "id": 3,
+    "tipo": 0,
+    "persona": 1,
+    "asunto": "Invitacion a seminario",
+    "remitente": "María",
+    "texto": "Encantada de conocerte Juan. me gustaría invitarte a una charla que daran unos cuantos sobre la diabetes.",
+    "fecha": "08/06/2022"
+  },
+  {
+    "id": 4,
+    "tipo": 1,
+    "persona": 1,
+    "asunto": "Buscar grupo de apoyo",
+    "destinatario": "María",
+    "texto": "Encantada de conocerte Juan. Te invito al grupo de apoyo.",
+    "fecha": "08/06/2022"
+  },
+  {
+    "id": 5,
+    "tipo": 2,
+    "persona": 0,
+    "asunto": "Concretar cita podologo",
+    "destinatario": "Wellinton",
+    "texto": "Hola, he visto que hace un tiempo que no tenemos revision es por ello que creo que deberiamos concretar una.",
+    "fecha": "08/01/2022"
+  }
+]

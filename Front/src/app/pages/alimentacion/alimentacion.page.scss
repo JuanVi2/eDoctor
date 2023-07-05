@@ -1,0 +1,61 @@
+/* Set the width to the full container and center the content */
+ion-select {
+    width: 100%;
+  
+    justify-content: center;
+  }
+  
+  /* Set the flex in order to size the text width to its content */
+  ion-select::part(placeholder),
+  ion-select::part(text) {
+    flex: 0 0 auto;
+  }
+  
+  /* Set the placeholder color and opacity */
+  ion-select::part(placeholder) {
+    color: #ff9100;
+    opacity: 1;
+  }
+  
+  /*
+   * Set the font of the first letter of the placeholder
+   * Shadow parts work with pseudo-elements, too!
+   * https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements
+   */
+  ion-select::part(placeholder)::first-letter {
+    font-size: 24px;
+    font-weight: 500;
+  }
+  
+  /* Set the text color */
+  ion-select::part(text) {
+    font-weight: bold;
+    color: #040a42;
+  }
+  
+  /* Set the icon color and opacity */
+  ion-select::part(icon) {
+    color: black;
+    opacity: 1;
+  }
+
+  .section-header {
+    color: #0F236C;
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  hr.solid {
+    border-top: 2px solid #0F236C;
+  } 
+
+.anyadirComida{
+    justify-content: center;
+    width: 80%;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+.letra {
+    font-family: 'Montserrat', sans-serif;
+}

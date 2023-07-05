@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "nombreCita": "Revisión rutinaria",
+    "consulta": "AX-12",
+    "horario": "Martes 12 de julio de 2022 - 11:45h"
+  },
+  {
+    "id": 2,
+    "nombreCita": "Cita endocrinología",
+    "consulta": "AX-24",
+    "horario": "Lunes 18 de julio de 2022 - 09:20h"
+  }
+]

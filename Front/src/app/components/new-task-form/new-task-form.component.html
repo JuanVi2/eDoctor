@@ -1,0 +1,87 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button (click)="closeModal()">
+        <ion-icon slot="icon-only" name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Añadir una nueva tarea</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-row style="margin-top: 3%;" class="head-row">
+    <ion-col>
+      <ion-row>
+        <ion-label>
+          <span class="head-text">Título de la tarea</span>
+        </ion-label>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-label>
+            <input type="text" class="content-text"/>
+          </ion-label>
+        </ion-col>
+      </ion-row>
+    </ion-col>
+  </ion-row>
+  <hr/>
+  <ion-row style="margin-top: 3%;" class="head-row">
+    <ion-col>
+      <ion-row>
+        <ion-label>
+          <span class="head-text">Descripción</span>
+        </ion-label>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-label>
+            <input type="text" class="content-text"/>
+          </ion-label>
+        </ion-col>
+      </ion-row>
+    </ion-col>
+  </ion-row>
+  <hr/>
+  <ion-row style="margin-top: 3%;" class="head-row">
+    <ion-col>
+      <ion-row>
+        <ion-label>
+          <span class="head-text">Tipo de tarea</span>
+        </ion-label>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-label>
+            <input type="text" class="content-text"/>
+          </ion-label>
+        </ion-col>
+      </ion-row>
+    </ion-col>
+  </ion-row>
+  <hr/>
+  <ion-row style="margin-top: 3%;" class="head-row">
+    <ion-col>
+      <ion-row>
+        <ion-label>
+          <span class="head-text">Fecha de vencimiento</span>
+        </ion-label>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-label>
+            <input type="date" class="content-text"/>
+          </ion-label>
+        </ion-col>
+      </ion-row>
+    </ion-col>
+  </ion-row>
+  <hr/>
+  <ion-row>
+    <ion-col style="display: flex; justify-content: center">
+      <ion-button (click)="closeModal()" style="width: 90%;">
+        <ion-label>Crear tarea</ion-label>
+      </ion-button>
+    </ion-col>
+  </ion-row>
+</ion-content>

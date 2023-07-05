@@ -1,0 +1,73 @@
+[
+  {
+    "id": 1,
+    "titulo": "Deporte",
+    "descripcion": "Realización de ejercicio físico",
+    "fechaInicio": "01/01/2022",
+    "fechaFin": "31/12/2022",
+    "medico": "1",
+    "actividades": [
+      {
+        "id": 1,
+        "titulo": "Bicicleta",
+        "descripcion": "Realización de actividad",
+        "fecha": "",
+        "periocidad": "semanal",
+        "tipo": "ejercicio físico"
+      },
+      {
+        "id": 2,
+        "titulo": "Natacion",
+        "descripcion": "Realizar natacion almenos una vez a la semana",
+        "fecha": "",
+        "periocidad": "semanal",
+        "tipo": "ejercicio físico"
+      },
+      {
+        "id": 3,
+        "titulo": "Suplemento",
+        "descripcion": "Tomar suplemento de vitamina X ",
+        "fecha": "",
+        "periocidad": "semanal",
+        "tipo": "ejercicio físico"
+      }
+    ],
+    "anotaciones": [
+      {
+        "texto": "Realizado 20 min de bicicleta",
+        "fecha": "06/06/2022",
+        "persona": "Paciente"
+      },
+      {
+        "texto": "Subir duración de bicicleta a 30 minutos",
+        "fecha": "13/06/2022",
+        "persona": "Medico"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "titulo": "Revisión cardiologa",
+    "descripcion": "Revisión de corazon por problemas asociados a la diabetes",
+    "fechaInicio": "01/05/2022",
+    "fechaFin": "01/06/2022",
+    "medico": "2",
+    "actividades": [
+      {
+        "id": 1,
+        "titulo": "Cita cardiologo",
+        "descripcion": "Acudir a la revision cardiologica",
+        "fecha": "15/06/2022",
+        "periocidad": "cita médica",
+        "tipo": "ejercicio físico"
+      }
+    ],
+    "anotaciones": [
+      {
+        "texto": "Acudir a la cita sin haber consumido carne roja las últimas 24 horas",
+        "fecha": "06/06/2022",
+        "persona": "Medico"
+      }
+    ]
+  }
+]

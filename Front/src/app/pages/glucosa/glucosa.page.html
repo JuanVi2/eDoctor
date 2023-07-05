@@ -1,0 +1,12 @@
+<app-base-layout [pageTitle]="'Mi glucosa'">
+  <ion-label class="section-header">MIS NIVELES DE GLUCOSA</ion-label>
+  <hr class="solid"/>
+  <app-glucosa-list *ngFor="let glucosa of glucosas" [glucosa]="glucosa">
+  </app-glucosa-list>
+  <ion-label class="section-header" style="margin-top: 20px; display:flex">REGISTRAR GLUCOSA</ion-label>
+  <hr class="solid"/>
+  <ion-item>
+    <ion-input class="letra" [(ngModel)]="glucosaInput" type="number" placeholder="Nivel glucosa"></ion-input>
+    <ion-button color="primary letra" (click)="alertaGlucosa()">Registrar</ion-button>
+  </ion-item>
+</app-base-layout>

@@ -1,0 +1,33 @@
+.css-input {
+  padding: 6px;
+  font-size: 15px;
+  font-family: 'Montserrat', sans-serif;
+  border-width: 1px;
+  border-color: #0F236C;
+  background-color: #FFFFFF;
+  color: #000000;
+  border-style: solid;
+  border-radius: 20px;
+  outline: none;
+  width: 100%;
+}
+.css-input:focus {
+  box-shadow: 0 0 10px rgba(15,35,108,.63);
+}
+
+.add-text {
+  font-size: 1rem;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+  margin-right: 2%;
+}
+
+.header-display {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+ion-label h3 {
+  font-family: 'Montserrat', sans-serif;
+}

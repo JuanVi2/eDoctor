@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "tituloTarea": "Solicitar recetas en la farmacia",
+    "descripcionTarea": "Se debe recoger los medicamentos pautados por el endocrino",
+    "tipo": "Farmacia",
+    "fechaLimite": "12/07/2022",
+    "status": "PENDING"
+  },
+  {
+    "id": 2,
+    "tituloTarea": "Asistir a seminario de diabetes",
+    "descripcionTarea": "Seminario presencial de aprendizaje sobre la diabetes",
+    "tipo": "Seminarios",
+    "fechaLimite": "09/07/2022",
+    "status": "PENDING"
+  },
+  {
+    "id": 3,
+    "tituloTarea": "Renovar tarjeta de salud",
+    "descripcionTarea": "Ir al centro de salud a renovar la tarjeta",
+    "tipo": "Administración",
+    "fechaLimite": "12/07/2022",
+    "status": "COMPLETED"
+  },
+  {
+    "id": 4,
+    "tituloTarea": "Salir a caminar",
+    "descripcionTarea": "Salir a caminar para mejorar los niveles de glucosa en sangre",
+    "tipo": "Plan de cuidados",
+    "fechaLimite": "15/07/2022",
+    "status": "REJECTED"
+  }
+]

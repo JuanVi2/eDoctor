@@ -1,0 +1,12 @@
+<app-base-layout [pageTitle]="'Home'">
+  <ion-label class="section-header">MI RESUMEN DIARIO</ion-label>
+  <hr class="solid"/>
+  <app-generic-card [cardTitle]="'Niveles de glucosa'" [titleColor]="'#f73145'" [dataToShow]="bloodData"></app-generic-card>
+  <app-generic-card [cardTitle]="'Ingesta de carbohidratos'" [titleColor]="'#f7a131'" [dataToShow]="foodData"></app-generic-card>
+  <ion-label class="section-header">MIS PRÓXIMAS CITAS</ion-label>
+  <hr class="solid" />
+  <app-cita-card *ngFor="let cita of citasPendientes" [cardTitle]="cita.nombreCita" [titleColor]="'#009655'" [cardInfo]="cita.horario + '\n' + cita.consulta" ></app-cita-card>
+  <ion-label class="section-header">MI LISTA DE TAREAS</ion-label>
+  <hr class="solid" />
+  <app-tarea-card></app-tarea-card>
+</app-base-layout>

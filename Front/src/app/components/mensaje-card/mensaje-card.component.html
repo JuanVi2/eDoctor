@@ -1,0 +1,30 @@
+<ion-label class="titulo" (click)="esconderMensajes()"
+           [style.color]="tipo === 0 ? '#2dd36f' : (tipo === 1) ? '#3DC2FF' : '#eb445a'"
+>
+  <ion-icon *ngIf="visible" name="chevron-down-outline"></ion-icon>
+  <ion-icon *ngIf="!visible" name="chevron-up-outline"></ion-icon>
+  &nbsp;
+  <span style="font-family: 'Montserrat', sans-serif;">{{titulo}}</span>
+</ion-label>
+
+<div *ngIf="visible">
+<ion-card  >
+  <ion-list>
+    <ion-item-sliding *ngFor="let mensaje of mensajes">
+      <ion-item detail id="details-trigger" (click)="showDetailsModal(mensaje)">
+        <ion-label style="font-family: 'Montserrat', sans-serif;" >
+          {{ mensaje.asunto }}
+        </ion-label>
+      </ion-item>
+      <ion-item-options *ngIf="tipo !== 2">
+        <ion-item-option color="danger" (click)="borrarMensaje(mensaje)">
+          <ion-icon name="close"></ion-icon>
+        </ion-item-option>
+        <ion-item-option color="success" (click)="showNewMensajeForm()">
+          <ion-icon name="arrow-undo-outline"></ion-icon>
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+</ion-card>
+</div>

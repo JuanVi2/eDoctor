@@ -1,0 +1,39 @@
+<ion-item>
+  <ion-grid fixed>
+    <ion-row style="width: 100%">
+      <ion-col size="12">
+        <ion-header>
+          <ion-label style="font-family: 'Montserrat', sans-serif; font-weight: bold; color: rgb(0, 89, 172);"> Ingesta del {{nuevaFecha}} a las {{alimento.hora}}
+          </ion-label>
+        </ion-header>
+        
+      </ion-col>
+    </ion-row>
+    <ion-row style="width: 100%;">
+      <ion-col size="4">
+        <ion-label class="letra"> Alimento
+        </ion-label>
+      </ion-col>
+      <ion-col size="4">
+        <ion-label class="letra"> Cantidad
+        </ion-label>
+      </ion-col>
+      <ion-col size="4">
+        <ion-label class="letra"> Raciones HC
+        </ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row class="letra">
+      <ion-col class="datos" size="4">
+        {{alimento.alimento}}
+      </ion-col>
+      <ion-col class="datos" size="4">
+        {{alimento.cantidad}} gr
+      </ion-col> 
+      <ion-col class="datos" size="4">
+        {{alimento.raciones}} R.HC
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  
+</ion-item>

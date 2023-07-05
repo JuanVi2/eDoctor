@@ -1,0 +1,17 @@
+<ion-item>
+  <ion-header>
+    <ion-label class="texto" style="color: orange; font-size: 21px"> {{medico.nombre}}
+      <ion-icon *ngIf="!medico.esMiMedico" (click)="cambiarMedico()"
+                name="add-circle" style="color: #101010"
+      ></ion-icon>
+      <ion-icon *ngIf="medico.esMiMedico" (click)="cambiarMedico()"
+                name="checkmark-circle" style="color: green;"
+      ></ion-icon>
+    </ion-label>
+    <ion-note class="texto">{{medico.especialidad}}</ion-note>
+  </ion-header>
+  <ion-avatar slot="end" (click)="navigateToVerMedico(medico.id)">
+    <img [src]="'../../assets/photos/' + medico.imagen"/>
+  </ion-avatar>
+
+</ion-item>

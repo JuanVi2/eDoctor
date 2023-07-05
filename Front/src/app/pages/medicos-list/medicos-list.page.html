@@ -1,0 +1,13 @@
+<app-base-layout [pageTitle]="'Médicos'">
+  <ion-item-group no-padding class="animated fadeInUp buscar">
+    <ion-input clearInput autocapitalize="words"
+               placeholder="Introduzca nombre..." [(ngModel)]="filtro"></ion-input>
+    <ion-button size="small" color="dark" (click)="obtenerMedicos()">
+      <ion-icon name="search"></ion-icon>
+    </ion-button>
+  </ion-item-group>
+  <app-medicos-list-item
+    *ngFor="let medico of medicos"
+    [medico]="medico">
+  </app-medicos-list-item>
+</app-base-layout>

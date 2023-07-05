@@ -1,0 +1,34 @@
+<ion-app>
+  <ion-split-pane contentId="main-content" >
+    <ion-menu contentId="main-content" type="overlay">
+      <ion-content style="--background: #05114a">
+        <ion-list id="inbox-list" style="--background: #05114a; padding: 0; margin-top: 70px; ">
+          <ion-list-header style="--background: #05114a; display: flex">
+            <ion-menu-toggle auto-hide="false">
+              <ion-item style="--background: #05114a; margin-bottom: 5%" routerDirection="root" [routerLink]="['/profile']" lines="none" detail="false"
+                        routerLinkActive="selected">
+                <ion-avatar style="border: 2px solid #f78800; margin-right: 10px; margin-left: -5px" slot="start">
+                  <img alt="avatar" src="assets/photos/testing_avatar.jpg">
+                </ion-avatar>
+                <ion-label style="font-family: 'Montserrat', sans-serif; color: white">
+                  Juan Profundo
+                </ion-label>
+              </ion-item>
+            </ion-menu-toggle>
+            <ion-menu-toggle>
+              <ion-icon style="color: white; margin-bottom: 85%" name="chevron-back-outline"></ion-icon>
+            </ion-menu-toggle>
+          </ion-list-header>
+          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
+            <ion-item style="--background: #05114a; color: white" routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false"
+                      routerLinkActive="selected">
+              <ion-icon style="color: white; padding-left: 5%;" slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>
+              <ion-label style="font-family: 'Montserrat', sans-serif">{{ p.title }}</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet id="main-content"></ion-router-outlet>
+  </ion-split-pane>
+</ion-app>

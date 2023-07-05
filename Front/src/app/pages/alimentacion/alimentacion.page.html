@@ -1,0 +1,79 @@
+<app-base-layout [pageTitle]="'Mi alimentación'">
+  <ion-label class="section-header">AÑADE UNA COMIDA</ion-label>
+  <hr class="solid"/>
+  <ion-item >
+    <ion-label class="letra">Alimento a añadir</ion-label>
+    <ion-select class="letra" value="pasta" okText="Okay" cancelText="Dismiss">
+      <ion-select-option value="pasta">Pasta</ion-select-option>
+      <ion-select-option value="manzana">Manzana</ion-select-option>
+      <ion-select-option value="miel">Miel</ion-select-option>
+      <ion-select-option value="pan">Pan</ion-select-option>
+      <ion-select-option value="platano">Plátano</ion-select-option>
+      <ion-select-option value="pollo">Pollo</ion-select-option>
+      <ion-select-option value="helado">Helado</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-item class="doble">
+    <ion-label class="letra" position="floating">Cantidad (g)</ion-label>
+    <ion-input class="letra" [(ngModel)]="cantidad" type="number"></ion-input>
+  </ion-item>
+  <ion-item class="doble letra">
+    <ion-label class="letra" position="floating">Raciones C.</ion-label>
+    <ion-input class="letra" [(ngModel)]="raciones" type="number"></ion-input>
+  </ion-item>
+  <div style="text-align:center; margin-top: 20px; margin-bottom: 20px;">
+    <ion-button class="anyadirComida letra" style="font-weight: bold;" (click)="anyadir()" color="warning" >Registrar</ion-button>
+  </div>
+  <ion-label class="section-header">HISTÓRICO DE COMIDAS</ion-label>
+  <hr class="solid"/>
+
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label class="letra">Desde</ion-label>
+          <ion-input
+          value="{{ desde | date: 'dd-MM-yyyy' }}"
+          id="date"
+          class="ion-text-end letra"
+        ></ion-input>
+        <ion-popover trigger="date" size="cover">
+          <ng-template>
+            <ion-datetime
+              presentation="date"
+              [(ngModel)]="desde"
+              
+            ></ion-datetime>
+          </ng-template>
+        </ion-popover>
+        </ion-item>
+      </ion-col>
+      <ion-col >
+        <ion-item>
+          <ion-label class="letra">Hasta</ion-label>
+          <ion-input
+          value="{{ hasta | date: 'dd-MM-yyyy' }}"
+          id="date2"
+          class="ion-text-end letra"
+        ></ion-input>
+        <ion-popover trigger="date2" size="cover">
+          <ng-template>
+            <ion-datetime
+              presentation="date2"
+              [(ngModel)]="hasta"
+              
+            ></ion-datetime>
+          </ng-template>
+        </ion-popover>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col style="text-align: center;">
+        <ion-button color="primary" style="width: 100%; font-weight: bold;" class="letra" (click)="obtenerHistorialFiltrado()">Buscar</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <app-alimentacion-list *ngFor="let alimento of alimentos" [alimento]="alimento">
+  </app-alimentacion-list>
+</app-base-layout>

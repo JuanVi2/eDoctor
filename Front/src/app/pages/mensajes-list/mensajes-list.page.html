@@ -1,0 +1,26 @@
+<app-base-layout [pageTitle]="'Mis mensajes'">
+
+  <ion-button   class="header-display" (click)="showNewMensajeForm()">
+    <ion-label class="add-text"><h3>Enviar mensaje</h3></ion-label>
+    <ion-icon size="large" name="add-circle-outline"></ion-icon>
+  </ion-button>
+
+  <app-mensaje-card titulo="Mensajes Enviados"
+                    [mensajes]="mensajesEnviados"
+                    [tipo]="0"
+                    (borrarEvento)="borrarMensaje($event)"
+  ></app-mensaje-card>
+
+  <app-mensaje-card titulo="Mensajes Recibidos"
+                    [mensajes]="mensajesRecibidos"
+                    [tipo]="1"
+                    (borrarEvento)="borrarMensaje($event)"
+  ></app-mensaje-card>
+
+  <app-mensaje-card titulo="Mensajes Borrados"
+                    [mensajes]="mensajesBorrados"
+                    [tipo]="2"
+                    (borrarEvento)="borrarMensaje($event)"
+  ></app-mensaje-card>
+
+</app-base-layout>

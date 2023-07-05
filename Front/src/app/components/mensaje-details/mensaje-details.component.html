@@ -1,0 +1,69 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Detalles del mensaje</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-row style="margin-top: 3%;" class="head-row">
+    <ion-col>
+      <ion-row>
+        <ion-label>
+          <span class="head-text">Asunto</span>
+        </ion-label>
+      </ion-row>
+      <ion-row>
+        <ion-label>
+          <span class="content-text">{{mensaje.asunto}}</span>
+        </ion-label>
+      </ion-row>
+    </ion-col>
+  </ion-row>
+  <hr />
+  <ion-row style="margin-top: 3%;" class="head-row">
+    <ion-col>
+      <ion-row>
+        <ion-label>
+          <span class="head-text">Enviado por</span>
+        </ion-label>
+      </ion-row>
+      <ion-row>
+        <ion-label>
+          <span class="content-text">{{mensaje.remitente}}</span>
+          &nbsp;
+          <span class="content-text">({{mensaje.persona === 0 ? 'Médico' : 'Paciente'}})</span>
+        </ion-label>
+      </ion-row>
+    </ion-col>
+  </ion-row>
+  <hr />
+  <ion-row style="margin-top: 3%;" class="head-row">
+    <ion-col>
+      <ion-row>
+        <ion-label>
+          <span class="head-text">Contenido</span>
+        </ion-label>
+      </ion-row>
+      <ion-row>
+        <ion-label>
+          <span class="content-text">{{mensaje.texto}}</span>
+        </ion-label>
+      </ion-row>
+    </ion-col>
+  </ion-row>
+  <hr />
+  <ion-row style="margin-top: 3%;" class="head-row">
+    <ion-col>
+      <ion-row>
+        <ion-label>
+          <span class="head-text">Fecha</span>
+        </ion-label>
+      </ion-row>
+      <ion-row>
+        <ion-label>
+          <span class="content-text">{{mensaje.fecha}}</span>
+        </ion-label>
+      </ion-row>
+    </ion-col>
+  </ion-row>
+
+</ion-content>

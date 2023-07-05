@@ -1,0 +1,105 @@
+<app-base-layout [pageTitle]="'Mi perfil'">
+  <ion-row class="ion-justify-content-center">
+    <ion-col size="auto">
+      <ion-avatar style="width: 130px; height: 130px">
+        <img alt="profilePic" [src]="'assets/photos/' + currentUser.profilePic"/>
+      </ion-avatar>
+    </ion-col>
+  </ion-row>
+  <ion-row class="ion-justify-content-center">
+    <ion-col size="auto">
+      <ion-label class="name-header">
+        <span>{{currentUser.name}}</span>
+      </ion-label>
+    </ion-col>
+  </ion-row>
+  <ion-row class="ion-justify-content-center">
+    <ion-col size="auto">
+      <ion-label class="subname-header">
+        <span>{{currentUser.tipoDiabetes}}</span>
+      </ion-label>
+    </ion-col>
+  </ion-row>
+  <ion-row style="margin-top: 5%;">
+    <ion-col>
+      <ion-label class="field-header">
+        <span>Dirección de email</span>
+      </ion-label>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-label>
+        <input class="input-text" type="text" value="{{currentUser.email}}">
+      </ion-label>
+    </ion-col>
+  </ion-row>
+  <ion-row style="margin-top: 5%;">
+    <ion-col>
+      <ion-label class="field-header">
+        <span>Contraseña</span>
+      </ion-label>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-label>
+        <input id="password-input" class="input-text" type="password" value="{{currentUser.password}}">
+        <ion-icon (click)="showHidePass()" style="position: absolute; float: right; right: 15px; top: 12px"
+                  name="eye"></ion-icon>
+      </ion-label>
+    </ion-col>
+  </ion-row>
+  <ion-row style="margin-top: 5%;">
+    <ion-col>
+      <ion-label class="field-header">
+        <span>Fecha de nacimiento</span>
+      </ion-label>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-label>
+        <input class="input-text" type="date" value="{{currentUser.fechaDeNacimiento}}">
+      </ion-label>
+    </ion-col>
+  </ion-row>
+  <ion-row style="margin-top: 5%;">
+    <ion-col>
+      <ion-label class="field-header">
+        <span>Visibilidad</span>
+      </ion-label>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <div class="selector-container">
+        <ion-label (click)="switchVisibilidad('Public')"
+                   [class]="currentUser.privacy === 'Public' ? 'active-privacy' : 'disabled-privacy'">Publico
+        </ion-label>
+        <ion-label (click)="switchVisibilidad('Private')"
+                   [class]="currentUser.privacy === 'Private' ? 'active-privacy' : 'disabled-privacy'">Privado
+        </ion-label>
+      </div>
+    </ion-col>
+  </ion-row>
+  <br/>
+  <ion-row>
+    <ion-col>
+      <ion-label class="field-header">Miembro desde <b>{{currentUser.joinDate}}</b></ion-label>
+    </ion-col>
+  </ion-row>
+  <br/>
+  <ion-row class="ion-justify-content-center" style="margin-top: 5%;">
+    <ion-col size="auto">
+      <ion-button (click)="saveChangesAlert()" class="save-button">Guardar cambios
+        <ion-icon style="margin-left: 10px" name="checkmark"></ion-icon>
+      </ion-button>
+    </ion-col>
+    <ion-col size="auto">
+      <ion-button [routerLink]="['/login']" class="logout-button">Logout
+        <ion-icon style="margin-left: 10px" name="log-out"></ion-icon>
+      </ion-button>
+    </ion-col>
+  </ion-row>
+</app-base-layout>

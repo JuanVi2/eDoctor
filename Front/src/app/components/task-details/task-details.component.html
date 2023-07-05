@@ -1,0 +1,77 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Detalles de la tarea</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-row style="margin-top: 3%;" class="head-row">
+    <ion-col>
+      <ion-row>
+        <ion-label>
+          <span class="head-text">Título de la tarea</span>
+        </ion-label>
+      </ion-row>
+      <ion-row>
+        <ion-label>
+          <span class="content-text">{{tarea.tituloTarea}}</span>
+        </ion-label>
+      </ion-row>
+    </ion-col>
+  </ion-row>
+  <hr /><ion-row style="margin-top: 3%;" class="head-row">
+    <ion-col>
+      <ion-row>
+        <ion-label>
+          <span class="head-text">Descripción</span>
+        </ion-label>
+      </ion-row>
+      <ion-row>
+        <ion-label>
+          <span class="content-text">{{tarea.descripcionTarea}}</span>
+        </ion-label>
+      </ion-row>
+    </ion-col>
+  </ion-row>
+  <hr /><ion-row style="margin-top: 3%;" class="head-row">
+    <ion-col>
+      <ion-row>
+        <ion-label>
+          <span class="head-text">Tipo de tarea</span>
+        </ion-label>
+      </ion-row>
+      <ion-row>
+        <ion-label>
+          <span class="content-text">{{tarea.tipo}}</span>
+        </ion-label>
+      </ion-row>
+    </ion-col>
+  </ion-row>
+  <hr /><ion-row style="margin-top: 3%;" class="head-row">
+    <ion-col>
+      <ion-row>
+        <ion-label>
+          <span class="head-text">Fecha de vencimiento</span>
+        </ion-label>
+      </ion-row>
+      <ion-row>
+        <ion-label>
+          <span class="content-text">{{tarea.fechaLimite}}</span>
+        </ion-label>
+      </ion-row>
+    </ion-col>
+  </ion-row>
+  <hr /><ion-row style="margin-top: 3%;" class="head-row">
+    <ion-col>
+      <ion-row>
+        <ion-label>
+          <span class="head-text">Estado de la tarea</span>
+        </ion-label>
+      </ion-row>
+      <ion-row>
+        <ion-label [style.background-color]="tarea.status === 'PENDING' ? '#ffc409' : (tarea.status === 'REJECTED') ? '#eb445a' : '#2dd36f'" class="content-status">
+          <span class="content-text">{{tarea.status}}</span>
+        </ion-label>
+      </ion-row>
+    </ion-col>
+  </ion-row>
+</ion-content>

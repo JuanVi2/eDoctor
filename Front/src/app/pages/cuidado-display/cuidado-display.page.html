@@ -1,0 +1,46 @@
+<app-base-layout [pageTitle]="'Plan de cuidado'" >
+
+  <ion-header style="padding: 10px; text-align: center">
+    <h2>{{cuidado.titulo}}</h2>
+    <ion-label>{{cuidado.descripcion}}</ion-label>
+    <ion-badge style="margin-top: 8px">{{cuidado.fechaInicio}} - {{cuidado.fechaFin}}</ion-badge>
+  </ion-header>
+
+  <ion-label class="titulo">
+    ACTIVIDADES
+  </ion-label>
+  <ion-card >
+    <ion-list>
+      <ion-item *ngFor="let actividad of cuidado.actividades" (click)="showDetailsModal(actividad)">
+        <ion-label style="font-family: 'Montserrat', sans-serif;">
+          {{actividad.titulo}}
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+
+  <ion-label class="titulo">ANOTACIONES</ion-label>
+  <ion-row  style="border-bottom: 1px solid #D6E9F0; ">
+    <ion-col size="10">
+      <ion-input [(ngModel)]="cuidadoInput"
+        class="letra" placeholder="Escriba una anotacion"></ion-input>
+    </ion-col>
+    <ion-col size="2">
+      <ion-icon (click)="alertaAnotacion()"
+        size="large"
+                name="add-circle-outline"></ion-icon>
+    </ion-col>
+  </ion-row>
+
+  <ion-list style="margin-top: 10px;">
+    <div class="mensaje" [ngClass]="anotacion.persona === 'Paciente' ? 'dcha' : 'izq'"
+         *ngFor="let anotacion of cuidado.anotaciones">
+      <ion-label><b>{{anotacion.persona}}</b></ion-label>
+      <br><br>
+      <ion-label>{{anotacion.texto}}</ion-label>
+      <br>
+      <small class="dcha">{{anotacion.fecha}}</small>
+    </div>
+  </ion-list>
+
+</app-base-layout>

@@ -1,0 +1,7 @@
+{
+  "name": "Diabetics",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

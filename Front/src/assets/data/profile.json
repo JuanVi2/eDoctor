@@ -1,0 +1,11 @@
+{
+  "id": 1,
+  "name": "Juan Profundo",
+  "tipoDiabetes": "Diabetes tipo 1",
+  "email": "juan.profundo@gmail.com",
+  "password": "123456",
+  "privacy": "Public",
+  "fechaDeNacimiento": "1992-08-14",
+  "joinDate": "23 May 2018",
+  "profilePic": "testing_avatar.jpg"
+}

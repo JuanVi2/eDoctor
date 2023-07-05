@@ -1,0 +1,27 @@
+<app-base-layout [pageTitle]="'Información de ' + medico.nombre ">
+  <ion-header>
+    <ion-avatar>
+      <img *ngIf="medico.imagen" [src]="'../../assets/photos/' + medico.imagen" style=""/>
+    </ion-avatar>
+    <br>
+
+  </ion-header>
+  <div>
+    <ion-label class="nombre">{{medico.nombre}}</ion-label>
+  </div>
+
+  <ion-list>
+    <ion-item>
+      <ion-label class="titulo">Especialidad:</ion-label>
+      <ion-label class="dato">{{medico.especialidad}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label class="titulo">Consulta:</ion-label>
+      <ion-label class="dato">{{medico.consulta}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label class="titulo">Disponible:</ion-label>
+      <ion-label class="dato">Horario de {{medico.disponible}}</ion-label>
+    </ion-item>
+  </ion-list>
+</app-base-layout>

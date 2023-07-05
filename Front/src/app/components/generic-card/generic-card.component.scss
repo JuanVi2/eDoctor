@@ -1,0 +1,28 @@
+ion-card {
+  border-radius: 20px;
+}
+
+ion-icon, h2 {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+h2 {
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.subtitle {
+  color: #0F236C;
+  display: inline-block;
+  vertical-align: middle;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.data {
+  color: #000000;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 1rem;
+  font-family: 'Montserrat', sans-serif;
+}

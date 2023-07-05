@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "nombre": "William Freud",
+    "imagen": "medico1.jpg",
+    "especialidad": "Endocrinología",
+    "consulta": "AX-24",
+    "disponible": "mañana",
+    "esMiMedico": true
+  },
+  {
+    "id": 2,
+    "nombre": "Wellinton Quiw",
+    "imagen": "medico2.jpg",
+    "especialidad": "Nutricionista",
+    "consulta": "BX-24",
+    "disponible": "tarde",
+    "esMiMedico": false
+  },
+  {
+    "id": 3,
+    "nombre": "Fernando López",
+    "imagen": "medico3.jpg",
+    "especialidad": "Cardiología",
+    "consulta": "FN-24",
+    "disponible": "mañana",
+    "esMiMedico": false
+  }
+]

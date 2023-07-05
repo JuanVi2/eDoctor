@@ -1,0 +1,11 @@
+<ion-item>
+  <ion-header >
+    <ion-label class="letra" [ngClass]="{'feliz': clase==1 , 'triste': clase==2, 'medio': clase==3}"> {{glucosa.nivel}} mg/dl
+    </ion-label>
+    <ion-note class="letra">{{glucosa.hora}}</ion-note>
+  </ion-header>
+  <ion-avatar slot="end">
+    <img [src]="'../../assets/photos/' + glucosa.imagen"/>
+  </ion-avatar>
+
+</ion-item>
